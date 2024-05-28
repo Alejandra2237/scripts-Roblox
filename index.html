@@ -13,16 +13,29 @@
 </head>
 <body>
     <center>
-    <h1>Script de Roblox: Clase 7 Summer Camp</h1>
+    <h1>Script de Roblox: Clase 15 Summer Camp</h1>
     <hr>
-    <h3>Script de velocidad</h3>
+    <h3>Script de desaparecer</h3>
     <textarea cols='80' rows='8' id="codigo">
-        --// 1.Coloca este script en cada parte del modelo 2.Cambia el valor de la variable y ejecuta para ver el resultado// 
+        function button1()
 
-        script.Parent.Touched:Connect(function(speed)
-	        speed.Parent.Humanoid.WalkSpeed=50
-	        script.Parent:Destroy()
-	    end)
+	game.Workspace.Button1.red.Material = Enum.Material.Neon
+	game.Workspace.Button1.red.BrickColor = BrickColor.new("Lime green")
+	game.Workspace.wall.Transparency = 1
+	game.Workspace.wall.CanCollide = false
+
+end
+
+game.Workspace.Button1.red.Touched:Connect(button1)
+
+function button2()
+	game.Workspace.Button1.red.Material = Enum.Material.Neon
+	game.Workspace.Button1.red.BrickColor = BrickColor.new("Really red")
+	game.Workspace.wall.Transparency = 0
+	game.Workspace.wall.CanCollide = true
+end
+
+game.Workspace.Button2.green.Touched:Connect(button2)
         </textarea><br>
         <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
         <script src="clipboard.min.js"></script>
