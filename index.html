@@ -17,24 +17,24 @@
     <hr>
     <h3>Script de desaparecer</h3>
     <textarea cols='80' rows='8' id="codigo">
-function button1()
-	game.Workspace.frontButton.red.BrickColor = BrickColor.new("Lime green")
-	game.Workspace.backButton.green.BrickColor = BrickColor.new("Lime green")
-	game.Workspace.wall.Transparency = 1
-	game.Workspace.wall.CanCollide = false
-
-end
-
-game.Workspace.frontButton.red.Touched:Connect(button1)
-
-function button2()
-	game.Workspace.backButton.green.BrickColor = BrickColor.new("Really red")
-	game.Workspace.frontButton.red.BrickColor = BrickColor.new("Really red")
-	game.Workspace.wall.Transparency = 0
-	game.Workspace.wall.CanCollide = true
-end
-
-game.Workspace.backButton.green.Touched:Connect(button2)
+        local sound = script.Parent.Sound
+        local buttonOn = script.Parent.ButtonOn
+        local buttonOff = script.Parent.ButtonOff
+        
+        sound:Play()
+        
+        buttonOn.MouseButton1Click:Connect(function()
+            sound:Pause()
+            buttonOn.Visible = false
+            buttonOff.Visible = true
+        end)
+        
+        buttonOff.MouseButton1Click:Connect(function()
+            sound:Resume()
+            buttonOn.Visible = true
+            buttonOff.Visible = false
+        end)
+        
         </textarea><br>
         <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
         <script src="clipboard.min.js"></script>
