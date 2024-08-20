@@ -75,6 +75,21 @@ script.Parent.Touched:Connect(disappear)
     <br><br>
     <hr>
 
+	    <hr>
+    <h3>Script para teletransportación</h3>
+    <textarea cols='80' rows='8' id="codigo">
+        script.Parent.Touched:connect(function(hit)
+	if hit.Parent:FindFirstChildWhichIsA("Humanoid") then
+		hit.Parent.UpperTorso.CFrame = CFrame.new(-2487.362, 1.5, 378.81)
+	end
+end)
+        
+        </textarea><br>
+        <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+        <script src="clipboard.min.js"></script>
+    <br><br>
+    <hr>
+
         <hr>
     <h3>Script tabla de velocidad</h3>
     <textarea cols='80' rows='8' id="codigo">
