@@ -32,32 +32,32 @@
 
         <hr>
     <h3>Script para perder salud</h3>
-    <textarea cols='80' rows='8' id="codigo">
+    <textarea cols='80' rows='8' id="codigo1">
         script.Parent.Touched:Connect(function(hit)
         hit.Parent.Humanoid.Health=hit.Parent.Humanoid.Health - 5 
         end)
         
         </textarea><br>
-        <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+        <button type="button" id="copyClip" data-clipboard-target="#codigo1">Copiar</button>
         <script src="clipboard.min.js"></script>
     <br><br>
     <hr>
         <hr>
     <h3>Script de súper salto</h3>
-    <textarea cols='80' rows='8' id="codigo">
+    <textarea cols='80' rows='8' id="codigo2">
         script.Parent.Touched:Connect(function(supersalto)
         supersalto.Parent.Humanoid.JumpHeight=500
         end)
         
         </textarea><br>
-        <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+        <button type="button" id="copyClip" data-clipboard-target="#codigo2">Copiar</button>
         <script src="clipboard.min.js"></script>
     <br><br>
     <hr>
 
         <hr>
     <h3>Script de desaparecer</h3>
-    <textarea cols='80' rows='8' id="codigo">
+    <textarea cols='80' rows='8' id="codigo3">
         function disappear()
 	    wait(0.01)
 	    script.Parent.Transparency = 1
@@ -70,14 +70,14 @@
 script.Parent.Touched:Connect(disappear)
         
         </textarea><br>
-        <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+        <button type="button" id="copyClip" data-clipboard-target="#codigo3">Copiar</button>
         <script src="clipboard.min.js"></script>
     <br><br>
     <hr>
 
 	    <hr>
     <h3>Script para teletransportación</h3>
-    <textarea cols='80' rows='8' id="codigo">
+    <textarea cols='80' rows='8' id="codigo4">
         script.Parent.Touched:connect(function(hit)
 	if hit.Parent:FindFirstChildWhichIsA("Humanoid") then
 		hit.Parent.UpperTorso.CFrame = CFrame.new(-2487.362, 1.5, 378.81)
@@ -85,14 +85,14 @@ script.Parent.Touched:Connect(disappear)
 end)
         
         </textarea><br>
-        <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+        <button type="button" id="copyClip" data-clipboard-target="#codigo4">Copiar</button>
         <script src="clipboard.min.js"></script>
     <br><br>
     <hr>
 
         <hr>
     <h3>Script tabla de velocidad</h3>
-    <textarea cols='80' rows='8' id="codigo">
+    <textarea cols='80' rows='8' id="codigo5">
         --// 1.Coloca el script en  ServerScriptService // 
 
         local function onPlayerJoin(player)
@@ -118,13 +118,13 @@ end)
         game.Players.PlayerAdded:Connect(onPlayerJoin)
         
         </textarea><br>
-        <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+        <button type="button" id="copyClip" data-clipboard-target="#codigo5">Copiar</button>
         <script src="clipboard.min.js"></script>
     <br><br>
     <hr>
         <hr>
     <h3>Script para aumentar puntos</h3>
-    <textarea cols='80' rows='8' id="codigo">
+    <textarea cols='80' rows='8' id="codigo6">
         --// 1.Coloca este script en cada parte del modelo y ejecuta para ver el resultado// 
 
         local Players = game:GetService("Players")
@@ -143,7 +143,7 @@ end)
         end)
         
         </textarea><br>
-        <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+        <button type="button" id="copyClip" data-clipboard-target="#codigo6">Copiar</button>
         <script src="clipboard.min.js"></script>
     <br><br>
     <hr>
