@@ -13,26 +13,118 @@
 </head>
 <body>
     <center>
-    <h1>Script de Roblox: Clase 22 Summer Camp</h1>
+    <h1>Script de Roblox</h1>
     <hr>
-    <h3>Script de botón con música</h3>
+    <h3>Script de velocidad</h3>
     <textarea cols='80' rows='8' id="codigo">
-        local sound = script.Parent.Sound
-        local buttonOn = script.Parent.ButtonOn
-        local buttonOff = script.Parent.ButtonOff
+        --// 1.Coloca este script en cada parte del modelo 2.Cambia el valor de la variable y ejecuta para ver el resultado// 
+
+        script.Parent.Touched:Connect(function(speed)
+	        speed.Parent.Humanoid.WalkSpeed=50
+	        script.Parent:Destroy()
+	    end)
         
-        sound:Play()
-        
-        buttonOn.MouseButton1Click:Connect(function()
-            sound:Pause()
-            buttonOn.Visible = false
-            buttonOff.Visible = true
+        </textarea><br>
+        <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+        <script src="clipboard.min.js"></script>
+    <br><br>
+    <hr>
+
+        <hr>
+    <h3>Script para perder salud</h3>
+    <textarea cols='80' rows='8' id="codigo">
+        script.Parent.Touched:Connect(function(hit)
+        hit.Parent.Humanoid.Health=hit.Parent.Humanoid.Health - 5 
         end)
         
-        buttonOff.MouseButton1Click:Connect(function()
-            sound:Resume()
-            buttonOn.Visible = true
-            buttonOff.Visible = false
+        </textarea><br>
+        <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+        <script src="clipboard.min.js"></script>
+    <br><br>
+    <hr>
+        <hr>
+    <h3>Script de súper salto</h3>
+    <textarea cols='80' rows='8' id="codigo">
+        script.Parent.Touched:Connect(function(supersalto)
+        supersalto.Parent.Humanoid.JumpHeight=500
+        end)
+        
+        </textarea><br>
+        <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+        <script src="clipboard.min.js"></script>
+    <br><br>
+    <hr>
+
+        <hr>
+    <h3>Script de desaparecer</h3>
+    <textarea cols='80' rows='8' id="codigo">
+        function disappear()
+	    wait(0.01)
+	    script.Parent.Transparency = 1
+	    script.Parent.CanCollide = false
+	    wait(1.2)
+	    script.Parent.Transparency = 0
+	    script.Parent.CanCollide = true
+    end
+
+script.Parent.Touched:Connect(disappear)
+        
+        </textarea><br>
+        <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+        <script src="clipboard.min.js"></script>
+    <br><br>
+    <hr>
+
+        <hr>
+    <h3>Script tabla de velocidad</h3>
+    <textarea cols='80' rows='8' id="codigo">
+        --// 1.Coloca el script en  ServerScriptService // 
+
+        local function onPlayerJoin(player)
+
+	        local leaderstats = Instance.new('Folder')
+
+	        leaderstats.Name = 'leaderstats'
+
+	        leaderstats.Parent = player
+
+
+
+	        local points = Instance.new('IntValue')
+
+	        points.Parent = leaderstats
+
+	        points.Name = 'Points'
+
+	        points.Value = 0
+
+        end
+
+        game.Players.PlayerAdded:Connect(onPlayerJoin)
+        
+        </textarea><br>
+        <button type="button" id="copyClip" data-clipboard-target="#codigo">Copiar</button>
+        <script src="clipboard.min.js"></script>
+    <br><br>
+    <hr>
+        <hr>
+    <h3>Script para aumentar puntos</h3>
+    <textarea cols='80' rows='8' id="codigo">
+        --// 1.Coloca este script en cada parte del modelo y ejecuta para ver el resultado// 
+
+        local Players = game:GetService("Players")
+        local copa = script.Parent
+
+        copa.Touched:Connect(function(hit)
+	        if hit.Parent:FindFirstChild("Humanoid") then
+
+		        local player = Players:GetPlayerFromCharacter(hit.Parent)
+		        player.leaderstats.Points.Value = player.leaderstats.Points.Value + 1
+	    		script.Parent:Destroy()
+		        script.Disabled = true
+		        script:Destroy()
+
+	        end
         end)
         
         </textarea><br>
